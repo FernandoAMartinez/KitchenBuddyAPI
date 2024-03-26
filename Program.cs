@@ -3,10 +3,6 @@ using KitchenBuddyAPI.Models;
 using KitchenBuddyAPI.Contracts;
 using KitchenBuddyAPI.Helpers;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Azure.Cosmos.Serialization.HybridRow.Schemas;
-using SQLitePCL;
-using Microsoft.Azure.Cosmos.Serialization.HybridRow;
-using System.Reflection.Metadata.Ecma335;
 
 var builder = WebApplication.CreateBuilder(args);
 
