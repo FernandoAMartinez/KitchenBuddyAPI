@@ -1,0 +1,2 @@
+namespace KitchenBuddyAPI.Contracts;
+public record ProfileResponse(long Id, DateTime CreatedAt, string Email, string FirstName, string LastName, DateTime Birthday, int FollowerCount, int FollowingCount);

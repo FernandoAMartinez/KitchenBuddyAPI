@@ -1,11 +1,18 @@
+using Postgrest.Attributes;
+using Postgrest.Models;
+
 namespace KitchenBuddyAPI.Models;
 
-public class User
+[Table("users")]
+public class User : BaseModel
 {
-    public int Id { get; set; }
+    //[PrimaryKey("id", false)]
+    [PrimaryKey("id", false)]
+    public long Id { get; set; }
+    [Column("created_at")]
+    public DateTime CreatedAt { get; set; }
+    [Column("email")]
     public string Email { get; set; }
+    [Column("password")]
     public string Password { get; set; }
-    public DateTime Birthday { get; set; }
-    public int FollowerCount { get; set; }
-    public int FollowingCount { get; set; }
 }
