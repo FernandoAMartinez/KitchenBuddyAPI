@@ -1,9 +1,20 @@
+using Postgrest.Attributes;
+using Postgrest.Models;
+
 namespace KitchenBuddyAPI.Models;
 
-public class Ingredient
+[Table("ingredients")]
+public class Ingredient : BaseModel
 {
-    public int Id { get; set; }
+    [Column("recipe_id")]
+    public long RecipeId {get; set;}
+    [PrimaryKey("ingredient_id", false)]
+    public long IngredientId { get; set; }
+    [Column("name")]
     public string Name { get; set; }
-    public int Amount { get; set; }
+    [Column("amount")]
+    public double Amount { get; set; }
+    [Column("unit")]
+    // public string Unit { get; set; }
     public MeassureUnit Unit { get; set; }
 }

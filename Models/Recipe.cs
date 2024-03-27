@@ -7,7 +7,7 @@ namespace KitchenBuddyAPI.Models;
 public class Recipe : BaseModel
 {
     [PrimaryKey("id", false)]
-    public int Id { get; set; }
+    public long Id { get; set; }
     [Column("created_at")]
     public DateTime CreatedAt { get; set; }
     [Column("title")]
@@ -19,9 +19,7 @@ public class Recipe : BaseModel
     [Column("origin")]
     public string Origin { get; set; }
     [Column("created_by")]
-    public int CreatedBy { get; set; } //Foreign Key to User.Id
-    [Column("ingredients")]
-    public List<Ingredient> Ingredients { get; set; }
+    public long CreatedBy { get; set; } //Foreign Key to User.Id
     [Column("steps")]
     public string[] Steps { get; set; }
 }
